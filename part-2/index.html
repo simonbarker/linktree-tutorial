@@ -16,33 +16,17 @@
   </head>
   <body>
     <section class="header">
-      <img class="profileImage" src="https://i.pravatar.cc/150?img=70" alt="" />
-      <p class="accountName">@allthecode - Simon Barker</p>
-      <p class="tagline">Learn to code with me</p>
-      <div class="socialRow">
-        <a href="https://www.tiktok.com/@allthecode">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
-        <a href="https://www.youtube.com/c/AllTheCode">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://twitter.com/allthecode_">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://github.com/simonbarker/">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/barkersimon/">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
+      <div id="profilePicContainer"></div>
+      <p id="accountName">
+        <span id="accountHandle"></span> -
+        <span id="creatorName"></span>
+      </p>
+      <p id="tagline"></p>
+      <div id="socialRow"></div>
     </section>
 
-    <section class="whereNext">
+    <section id="whereNext">
       <h2>Where to next?</h2>
-      <button class="whiteButton">See my developer portfolio</button>
-      <button class="whiteButton">Get my notion planner</button>
-      <button class="whiteButton">How I learnt to code</button>
     </section>
 
     <section class="newsletter">
@@ -70,4 +54,5 @@
       <button class="whiteButton">Buy me a coffee ☕</button>
     </section>
   </body>
+  <script type="module" src="./main.js"></script>
 </html>
