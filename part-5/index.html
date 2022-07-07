@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/94eeba7e1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>@allthecode Linktree</title>
+  </head>
+  <body>
+    <section class="header">
+      <div id="profilePicContainer"></div>
+      <p id="accountName">
+        <span id="accountHandle"></span> -
+        <span id="creatorName"></span>
+      </p>
+      <p id="tagline"></p>
+      <div id="socialRow"></div>
+    </section>
+
+    <section id="whereNext">
+      <h2>Where to next?</h2>
+    </section>
+
+    <section class="newsletter">
+      <h2>Join my newsletter</h2>
+      <div class="card">
+        <p>Get weekly dev tips and tools straight to your inbox!</p>
+        <form id="subscriberForm" action="">
+          <div class="formFields">
+            <label for="first_name">
+              <span>Name</span>
+              <input
+                type="text"
+                name="first_name"
+                placeholder="Coder"
+                required
+              />
+            </label>
+            <label for="email">
+              <span>Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="awesome@coder.com"
+                required
+              />
+            </label>
+          </div>
+          <button id="subscribeButton" class="orangeButton">Subscribe</button>
+          <div id="signupSuccess" class="signupResult hidden">
+            🥳 Great, please check emails to confirm
+          </div>
+          <div id="signupError" class="signupResult hidden">
+            😔 Something went wrong, please try again
+            <span id="mailchimpError"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="supportMe">
+      <h2>Support my content</h2>
+      <button id="buyMeACoffeeButton" class="whiteButton">
+        Buy me a coffee ☕
+      </button>
+    </section>
+
+    <div id="modal" class="modalBackground hidden">
+      <div class="modalContent">
+        <h2>You're Awesome</h2>
+        <p class="modalSubHeading">
+          How many coffees would you like to buy me?
+        </p>
+        <div id="products">
+          <div class="product" data-productCode="oneCoffee">
+            ☕️
+            <div class="amount">$5</div>
+          </div>
+          <div class="product" data-productCode="twoCoffees">
+            ☕️☕️
+            <div class="amount">$10</div>
+          </div>
+          <div class="product" data-productCode="fourCoffees">
+            ☕️☕️☕️☕️
+            <div class="amount">$20</div>
+          </div>
+        </div>
+        <span id="stripeSpinner" class="loader hidden"></span>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="./main.js"></script>
+</html>
